@@ -14,8 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework.schemas import get_schema_view
+from rest_framework.documentation import include_docs_urls
+from django.conf.urls.static import static
+from django.conf import settings
+
+schema_view = get_schema_view(
+    title="My portfolio's API", 
+    description="An API to add my information to my portfolio site. This is also one way for me to practice django and django REST."
+    )
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('schema/', schema_view),
+    path('docs/', include_docs_urls(title='Employee API')),
+    path('api/', include('api.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
