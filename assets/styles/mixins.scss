@@ -1,0 +1,38 @@
+@mixin screen($size) {
+  $xs: "(max-width: 575px)";
+  $sm: "(max-width: 768px)";
+  $md: "(max-width: 991px)";
+  $lg: "(max-width: 1199px)";
+
+  @if $size==lg {
+    @media screen and #{$lg} {
+      @content;
+    }
+  }
+
+  @else if $size==md {
+    @media screen and #{$md} {
+      @content;
+    }
+  }
+
+  @else if $size==sm {
+    @media screen and #{$sm} {
+      @content;
+    }
+  }
+
+  @else if $size==xs {
+    @media screen and #{$xs} {
+      @content;
+    }
+  }
+
+  @else {
+    @media screen and #{$size} {
+      @content;
+    }
+  }
+}
+
+// IPAD PRO BREAKPOINT @media screen and (max-width: 1199px) and (max-height: 1366px) and (orientation: portrait) {}
