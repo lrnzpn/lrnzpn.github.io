@@ -1,8 +1,14 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+    <div class="main-content">
+        <nuxt />
+    </div>
 </template>
+
+<script>
+export default {
+    components: {}
+}
+</script>
 
 <style>
 html {
