@@ -12,7 +12,11 @@ export default {
         { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
         ],
         link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap'
+            }
         ]
     },
     /*
@@ -25,12 +29,14 @@ export default {
     css: [
         '~assets/styles/global.scss',
         '~assets/styles/variables.scss',
-        '~assets/styles/mixins.scss'
+        '~assets/styles/mixins.scss',
+        '@fortawesome/fontawesome-svg-core/styles.css'
     ],
     /*
     ** Plugins to load before mounting the App
     */
     plugins: [
+        '~/plugins/fontawesome.js',
     ],
     /*
     ** Nuxt.js dev-modules
@@ -48,7 +54,7 @@ export default {
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/style-resources-module
-        '@nuxtjs/style-resources',
+        '@nuxtjs/style-resources'
     ],
     /*
     ** Axios module configuration
