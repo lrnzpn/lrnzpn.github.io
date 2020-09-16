@@ -10,7 +10,6 @@ from api.views import *
 router = SimpleRouter()
 router.register(r'experience', ExperienceViewSet)
 router.register(r'projects', ProjectViewSet)
-router.register(r'work', CompanyViewSet)
 
 
 urlpatterns = [

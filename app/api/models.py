@@ -8,7 +8,8 @@ class Project(models.Model):
     name = models.CharField(max_length=255)
     slug = models.CharField(max_length=255, unique=True, blank=True, null=True)
     tags = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
+    link = models.URLField( null=True, blank=True)
     image = models.FileField(upload_to='projects/', null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -25,26 +26,12 @@ class Project(models.Model):
              
     class Meta:
         ordering = ['name']
-        
-class Company(models.Model):
-    name = models.CharField(max_length=255) # company
-    image = models.FileField(upload_to='experience/', null=True, blank=True)
-    description = models.TextField()
-    link = models.URLField( null=True, blank=True )
-    
-    def __str__(self):
-        return self.name
-    
-    def __repr__(self):
-        return self.name
-
-    class Meta:
-        ordering = ['name']
-    
+            
 class Experience(models.Model):
-    company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True, related_name="experiences")
     name = models.CharField(max_length=255)
-    description = models.TextField()
+    link = models.URLField( null=True, blank=True)
+    title = models.CharField(max_length=255)
+    description = models.TextField(null=True, blank=True)
     start = models.DateField()
     end = models.DateField()
     
@@ -54,4 +41,4 @@ class Experience(models.Model):
     def __repr__(self):
     	return self.name
     class Meta:
-        ordering = ['start']
+        ordering = ['-start']

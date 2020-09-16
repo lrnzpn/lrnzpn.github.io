@@ -3,5 +3,4 @@ from api.models import *
 
 # Register your models here.
 admin.site.register(Project)
-admin.site.register(Company)
 admin.site.register(Experience)

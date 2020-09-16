@@ -17,8 +17,3 @@ class ExperienceViewSet(viewsets.ModelViewSet):
     queryset = Experience.objects.all()
     serializer_class = ExperienceSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly,]
-    
-class CompanyViewSet(viewsets.ModelViewSet):
-    queryset = Company.objects.all()
-    serializer_class = CompanySerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly,]
