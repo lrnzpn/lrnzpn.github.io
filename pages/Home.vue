@@ -1,9 +1,9 @@
 <template lang="pug">
     .landing-container
         .hero.static
+        .overlay
             .hero-txt-container.center
                 span Hi! My name is Miggy.
-        .overlay
         .chevron-container.center
             font-awesome-icon.bounce(:icon="{ prefix: 'fas', iconName: 'chevron-down' }")
             

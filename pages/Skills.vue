@@ -109,6 +109,9 @@
 
         ul {
             font-family: 'Roboto', sans-serif;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
 
             li {
                 color: $main-black;

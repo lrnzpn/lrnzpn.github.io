@@ -1,9 +1,10 @@
 export const state = () => ({
-    isNavOpen: false
+    isNavOpen: false,
+    
 })
 
-export const mutations = () => ({
+export const mutations = {
     toggleNav(state) {
         state.isNavOpen = !state.isNavOpen
     }
-})
+}
