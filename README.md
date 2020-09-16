@@ -1,6 +1,6 @@
 # lrnzpn
 
-> My Portfolio Website
+> My Portfolio Website built on Nuxt.js with a Django REST API backend.
 
 ## Build Setup
 

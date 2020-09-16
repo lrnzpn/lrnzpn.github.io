@@ -27,6 +27,7 @@
                         span frameworks
                     ul
                         li Django
+                        li Django REST
                         li Express
                         li jQuery
                         li NuxtJS
@@ -54,7 +55,7 @@
                     ul
                         li Adobe Photoshop
                         li Adobe XD
-                        li Bootstrap
+                        li Bootstrap5
                         li Figma
                         li Fontawesome
                     

@@ -54,4 +54,4 @@ class Experience(models.Model):
     def __repr__(self):
     	return self.name
     class Meta:
-        ordering = ['-end']
+        ordering = ['start']
