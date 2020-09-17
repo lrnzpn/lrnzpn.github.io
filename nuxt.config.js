@@ -54,7 +54,9 @@ export default {
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/style-resources-module
-        '@nuxtjs/style-resources'
+        '@nuxtjs/style-resources',
+        // Doc: https://www.npmjs.com/package/vue-scrollto
+        ['vue-scrollto/nuxt', {duration: 300, easing: "ease"}],
     ],
     /*
     ** Axios module configuration

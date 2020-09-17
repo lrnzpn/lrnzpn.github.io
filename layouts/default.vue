@@ -1,12 +1,17 @@
 <template>
     <div class="main-content">
+        <Navigation />
         <nuxt keep-alive />
     </div>
 </template>
 
 <script>
+import Navigation from '../components/Navigation'
+
 export default {
-    components: {}
+    components: {
+        Navigation
+    }
 }
 </script>
 
@@ -25,4 +30,5 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
 </style>

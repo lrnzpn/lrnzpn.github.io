@@ -17,7 +17,7 @@
 
     .about-txt-container {
 
-        padding: 5% 0;
+        padding: 10% 0;
         width: 60%;
         color: $white;
         text-align: center;
