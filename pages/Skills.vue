@@ -74,12 +74,20 @@
             span {
                 font-size: $font-size--7;
                 color: $main-black;
+
+                @include screen('md') {
+                    font-size: $font-size--5;
+                }
             }
 
             p {
                 margin: 1rem 0;
                 color: $main-gray;
                 font-family: 'Roboto', sans-serif;
+                text-align: center;
+                @include screen('md') {
+                    font-size: $font-size--3;
+                }
             }
         }
     }
@@ -87,6 +95,10 @@
 
 .skills {
    align-items: flex-start;
+
+   @include screen('sm') {
+       flex-wrap: wrap;
+   }
 
    .skills-wrapper {
         color: $main-olive;

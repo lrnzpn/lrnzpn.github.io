@@ -91,6 +91,10 @@ body {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 1440px;
     width: 90%;

@@ -1,13 +1,13 @@
 <template lang="pug">
     .experience-container
-        .experience.container.center
-            span Experience
+        .experience.container
+            span.center Work-Related Experience
             .exp-wrapper.ai-flex-start
                 .work-select
                     span.work-header(v-for="(exp, idx) in experience" :key="idx" @click="displayExp(idx)") {{exp.name}}
                 .work-desc
                     .work-desc-container
-                        span {{experience[activeIndex].title}}
+                        span {{experience[activeIndex].title}} @ <a :href='experience[activeIndex].link'>{{experience[activeIndex].name}}</a>
                         span {{formatDate(experience[activeIndex].start)}} - {{formatDate(experience[activeIndex].end)}}
                         ul 
                             li(v-for="(desc, idx) in split(experience[activeIndex].description)" :key="idx") {{desc}}
@@ -48,25 +48,45 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.exp-wrapper {
 
-    width: 60%;
+.experience {
+    > span {
+        font-size: $font-size--7;
+        letter-spacing: 1.5px;
+    }
+}
+
+.exp-wrapper {
     justify-content: space-between;
+    width: 100%;
 
     span {
         display: block;
 
         &.work-header {
             cursor: pointer;
-            background-color: $main-olive;
+            border: 2px solid $main-olive;
             padding: 1rem 1.5rem;
             border-radius: 10px;
             text-align: center;
-            color: $white;
+            color: $main-black;
             text-transform: uppercase;
-            font-weight: bold;
             margin-bottom: 1rem;
+            transition: all ease 300ms;
+
+            &:hover {
+                background-color: $main-olive;
+                color: $white;
+            }
         }
+    }
+
+    .work-desc-container {
+        width: 500px;
+        span:nth-child(1) {
+            
+        }
+
     }
 }
 </style>

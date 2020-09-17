@@ -45,7 +45,7 @@ export default {
                     break;
                 }
             }
-        }
+        },
     },
     fetch({store}) {
         store.commit('setCurrActiveState'),

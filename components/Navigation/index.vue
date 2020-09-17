@@ -3,7 +3,7 @@
         header.nav-container(v-if="down")
             nav.nav-header.container.jc-space-between
                 .logo-wrapper
-                    .logo.static
+                    a(href="/").logo.static
                 .menu-wrapper.jc-space-between
                     .menu-link(v-for="route in router" :key="route.id")
                         router-link(:to="`/${route.path}`" v-scroll-to="route.path" :class="{'active': activeSection === route.section}") {{route.name}}
@@ -127,6 +127,12 @@ export default {
         @include screen('md') {
             color: $white;
             margin-bottom: 20px;
+        }
+
+        &.logo {
+            &:after {
+                width: 0 !important;
+            }
         }
 
         &:after {
