@@ -50,14 +50,23 @@ export default {
 <style lang="scss" scoped>
 
 .experience {
+    width: 75%;
+    background: $main-olive;
+    padding: 1em;
+    border: 1px solid $main-olive;
+    border-radius: 10px;
+
     > span {
         font-size: $font-size--7;
         letter-spacing: 1.5px;
+        margin-bottom: .75em;
+        color: $main-black;
+        font-weight: 500;
     }
 }
 
 .exp-wrapper {
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
 
     span {
@@ -65,26 +74,50 @@ export default {
 
         &.work-header {
             cursor: pointer;
-            border: 2px solid $main-olive;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            color: $main-black;
+            color: $white;
             text-transform: uppercase;
             margin-bottom: 1rem;
             transition: all ease 300ms;
+            font-weight: 500;
+            width: 250px;
 
             &:hover {
-                background-color: $main-olive;
-                color: $white;
+                font-size: 1.1em;
             }
         }
     }
 
     .work-desc-container {
-        width: 500px;
-        span:nth-child(1) {
-            
+        width: 400px;
+        span {
+            font-family: 'Roboto', sans-serif;
+            color: $white;
+
+            a {
+                color: $white;
+                border-bottom: 3px solid transparent;
+                transition: border-bottom 300ms ease-in;
+                &:hover {
+                    border-bottom: 3px solid $white;
+                }
+            }
+
+            &:nth-child(1) {
+                font-weight: bold;
+                margin-bottom: .25em;
+            }
+
+            &:nth-child(2) {
+                color: rgba(0,0,0,0.5);
+                font-weight: 500;
+            }
+        }
+
+        ul {
+            color: $white;
+            li {
+                font-family: 'Roboto', sans-serif;
+            }
         }
 
     }
