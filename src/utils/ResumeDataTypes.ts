@@ -24,3 +24,22 @@ export type EducationDataType = {
   start: string;
   end: string;
 };
+
+export type ExperienceDataType = {
+  company: string;
+  link: string;
+  role: Array<{
+    title: string;
+    start: string;
+    end: string;
+    description: string;
+    technologies: string[];
+  }>;
+};
+
+export type ProjectsDataType = {
+  title: string;
+  techStack: string[];
+  description: string;
+  link?: string;
+};

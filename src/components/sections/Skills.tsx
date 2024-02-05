@@ -6,15 +6,11 @@ const Skills = ({ skillList }) => {
   return (
     <Section>
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>Skills</h2>
-      <div className="flex flex-wrap gap-1">
+      <Pill.Wrapper>
         {skillList.map((skill: string) => {
-          return (
-            <Pill key={skill} type="outlined">
-              {skill}
-            </Pill>
-          );
+          return <Pill key={skill}>{skill}</Pill>;
         })}
-      </div>
+      </Pill.Wrapper>
     </Section>
   );
 };

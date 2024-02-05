@@ -8,16 +8,28 @@ const Header = ({ children }: { children: React.ReactNode }) => {
   return <div className="flex flex-col space-y-1.5">{children}</div>;
 };
 
-const Title = ({ children }: { children: React.ReactNode }) => {
-  return <h3>{children}</h3>;
+const Title = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+  return <h4 className={`${tailwindCommonStyles.title} ${className || ""}`}>{children}</h4>;
 };
 
-const Description = ({ children }: { children: React.ReactNode }) => {
-  return <p>{children}</p>;
+const Description = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return <p className={`${tailwindCommonStyles.text} text-sm ${className || ""}`}>{children}</p>;
 };
 
 const Content = ({ children, className }: { children: React.ReactNode; className?: string }) => {
-  return <div className={`${className} ${tailwindCommonStyles.text} text-sm`}>{children}</div>;
+  return (
+    <div
+      className={`flex flex-col overflow-hidden border border-olive-green p-3 rounded-lg ${className || ""}`}
+    >
+      {children}
+    </div>
+  );
 };
 
 Card.Header = Header;

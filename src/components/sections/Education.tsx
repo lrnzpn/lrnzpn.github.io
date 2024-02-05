@@ -13,12 +13,12 @@ const Education = ({ education }) => {
             <Card.Header>
               <div className="flex items-center justify-between gap-x-2 text-base">
                 <h3 className={`${tailwindCommonStyles.subheading}`}>{educ.school}</h3>
-                <div className="font-primary text-sm text-brown text-pretty">
+                <div className={`${tailwindCommonStyles.miscDate}`}>
                   {educ.start} - {educ.end}
                 </div>
               </div>
             </Card.Header>
-            <Card.Content className="mt-2">{educ.degree}</Card.Content>
+            <Card.Description className="mt-2">{educ.degree}</Card.Description>
           </Card>
         );
       })}
