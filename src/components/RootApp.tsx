@@ -8,8 +8,11 @@ import Skills from "./sections/Skills";
 
 const RootApp = () => {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 bg-white md:p-16">
-      <div className="mx-auto w-full max-w-2xl space-y-8">
+    <main
+      className="container relative mx-auto scroll-my-12 overflow-auto p-4 bg-white md:p-16"
+      data-testid="rootMain"
+    >
+      <div className="mx-auto w-full max-w-2xl space-y-8" data-testid="rootSectionWrapper">
         <Info information={RESUME_DATA} />
         <About summary={RESUME_DATA.summary} />
         <Education education={RESUME_DATA.education} />

@@ -6,7 +6,7 @@ const Skills = ({ skillList }) => {
   return (
     <Section>
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>Skills</h2>
-      <Pill.Wrapper>
+      <Pill.Wrapper testId="skills">
         {skillList.map((skill: string) => {
           return <Pill key={skill}>{skill}</Pill>;
         })}

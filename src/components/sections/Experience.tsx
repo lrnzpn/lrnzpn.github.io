@@ -10,23 +10,36 @@ const Experience = ({ experienceList }) => {
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>Experience</h2>
       {experienceList.map((exp: ExperienceDataType) => {
         return (
-          <Card key={exp.company}>
-            <Card.Header>
-              <h3 className={`${tailwindCommonStyles.subheading}`}>{exp.company}</h3>
+          <Card key={exp.company} testId="experience">
+            <Card.Header testId="experience">
+              <h3
+                className={`${tailwindCommonStyles.subheading}`}
+                data-testid={`company-${exp.company}`}
+              >
+                {exp.company}
+              </h3>
             </Card.Header>
             {exp.role.map((role) => {
               return (
                 <div key={role.title}>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <Card.Title className="mt-2 underline decoration-olive-green decoration-2 underline-offset-2">
+                    <Card.Title
+                      testId="experience"
+                      className="mt-2 underline decoration-olive-green decoration-2 underline-offset-2"
+                    >
                       {role.title}
                     </Card.Title>
-                    <div className={`${tailwindCommonStyles.miscDate}`}>
+                    <div
+                      className={`${tailwindCommonStyles.miscDate}`}
+                      data-testid={`company${exp.company}-duration`}
+                    >
                       {role.start} - {role.end}
                     </div>
                   </div>
-                  <Card.Description className="my-3">{role.description}</Card.Description>
-                  <Pill.Wrapper>
+                  <Card.Description testId="experience" className="my-3">
+                    {role.description}
+                  </Card.Description>
+                  <Pill.Wrapper testId={`exp-${exp.company.replace(" ", "")}Tech`}>
                     {role.technologies.map((tech) => {
                       return (
                         <Pill key={tech} type="outlined">
