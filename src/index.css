@@ -1,23 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Trispace:wght@100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  min-width: 0;
-}
+@layer base {
+  :root {
+    /* palette */
+    --main-gray: #656e79;
+    --main-brown: #b78b64;
+    --main-dark-green: #334649;
+    --main-olive-green: #959e87;
+    --main-white: #f6fefb;
+    --main-black: #222222;
 
-body {
-  min-height: 100dvh;
-}
+    /* font family, fallback to serif-mono (tailwind default) */
+    --primary-font: "Trispace", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --secondary-font: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+      "Liberation Mono", "Courier New", monospace;
+  }
 
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
+  * {
+    box-sizing: border-box;
+    min-width: 0;
+  }
 
-p {
-  text-wrap: pretty;
+  body {
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
 }
