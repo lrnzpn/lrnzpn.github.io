@@ -9,16 +9,23 @@ const Education = ({ education }) => {
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>Education</h2>
       {data.map((educ) => {
         return (
-          <Card key={educ.school}>
-            <Card.Header>
+          <Card key={educ.school} testId="education">
+            <Card.Header testId="education">
               <div className="flex items-center justify-between gap-x-2 text-base">
-                <h3 className={`${tailwindCommonStyles.subheading}`}>{educ.school}</h3>
-                <div className={`${tailwindCommonStyles.miscDate}`}>
+                <h3 className={`${tailwindCommonStyles.subheading}`} data-testid="school">
+                  {educ.school}
+                </h3>
+                <div
+                  className={`${tailwindCommonStyles.miscDate}`}
+                  data-testid={`${educ.school.replace(" ", "")}-duration`}
+                >
                   {educ.start} - {educ.end}
                 </div>
               </div>
             </Card.Header>
-            <Card.Description className="mt-2">{educ.degree}</Card.Description>
+            <Card.Description testId="education" className="mt-2">
+              {educ.degree}
+            </Card.Description>
           </Card>
         );
       })}

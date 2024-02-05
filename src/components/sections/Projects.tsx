@@ -11,23 +11,32 @@ const Projects = ({ projectsList }) => {
       <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
         {projectsList.map((project: ProjectsDataType) => {
           return (
-            <Card.Content key={project.title}>
-              <Card.Title>
+            <Card.Content key={project.title} testId="projects">
+              <Card.Title testId="projects">
                 {project.link ? (
                   <a
-                    className="cursor-pointer hover:underline decoration-olive-green decoration-2 underline-offset-2"
+                    className="cursor-pointer hover:underline decoration-brown decoration-2 underline-offset-2"
                     href={project.link}
+                    data-testid={`projects-${project.title.replace(" ", "")}`}
                   >
                     {project.title}
                   </a>
                 ) : (
-                  project.title
+                  <span data-testid={`projects-${project.title.replace(" ", "")}`}>
+                    {project.title}
+                  </span>
                 )}
               </Card.Title>
-              <Card.Description className="text-xs mt-1 mb-2 leading-5 text-balance">
+              <Card.Description
+                testId="projects"
+                className="text-xs mt-1 mb-2 leading-5 text-balance"
+              >
                 {project.description}
               </Card.Description>
-              <Pill.Wrapper className="mt-auto">
+              <Pill.Wrapper
+                className="mt-auto"
+                testId={`projects-${project.title.replace(" ", "")}Tech`}
+              >
                 {project.techStack.map((tech) => {
                   return (
                     <Pill key={tech} type="outlined" className="text-[10px]">

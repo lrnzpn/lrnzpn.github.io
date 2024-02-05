@@ -15,17 +15,30 @@ const Pill = ({
   return (
     <div
       className={`inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold font-secondary text-nowrap ${pillClass} ${className || ""}`}
+      data-testid="pill"
     >
       {children}
     </div>
   );
 };
 
-const Wrapper = ({ children, className }: { children: React.ReactNode; className?: string }) => {
+const Wrapper = ({
+  children,
+  className,
+  testId,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  testId: string;
+}) => {
   const classes = className
     ? `flex flex-wrap gap-1 mb-2 ${className}`
     : "flex flex-wrap gap-1 mb-2";
-  return <div className={classes}>{children}</div>;
+  return (
+    <div className={classes} data-testid={`${testId}-pillWrapper`}>
+      {children}
+    </div>
+  );
 };
 
 Pill.Wrapper = Wrapper;

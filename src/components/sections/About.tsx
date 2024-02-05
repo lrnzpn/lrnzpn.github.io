@@ -5,7 +5,9 @@ const About = ({ summary }: { summary: string }) => {
   return (
     <Section>
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>About</h2>
-      <p className={`${tailwindCommonStyles.text} text-sm`}>{summary}</p>
+      <p className={`${tailwindCommonStyles.text} text-sm`} data-testid="aboutSummary">
+        {summary}
+      </p>
     </Section>
   );
 };
