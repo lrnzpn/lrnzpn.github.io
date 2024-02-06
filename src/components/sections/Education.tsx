@@ -9,7 +9,7 @@ const Education = ({ education }) => {
       <h2 className={`${tailwindCommonStyles.heading} text-xl`}>Education</h2>
       {data.map((educ) => {
         return (
-          <Card key={educ.school} testId="education">
+          <Card key={educ.school.concat(educ.end)} testId="education">
             <Card.Header testId="education">
               <div className="flex items-center justify-between gap-x-2 text-base">
                 <h3 className={`${tailwindCommonStyles.subheading}`} data-testid="school">

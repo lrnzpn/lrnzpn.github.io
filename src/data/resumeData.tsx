@@ -37,9 +37,22 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Ateneo de Manila University",
-      degree: "Bachelor's Degree in Computer Science, Specialization in Data Science and Analytics",
-      start: "2016",
+      degree: "BS Computer Science, Specialization in Data Science and Analytics",
+      start: "2018",
       end: "2021",
+    },
+    {
+      school: "Seoul National University",
+      degree:
+        "Summer Term Abroad: Introduction to Computer Science, Introduction to Marketing, and Korean Language 1",
+      start: "2018",
+      end: "2018",
+    },
+    {
+      school: "Ateneo de Manila University",
+      degree: "BS Management Information Systems",
+      start: "2016",
+      end: "2018",
     },
   ],
   work: [
@@ -52,7 +65,7 @@ export const RESUME_DATA = {
           start: "Mar 2022",
           end: "Present",
           description:
-            "Responsible for the maintenance of Business Deposits Web App built with Angular, adding new features and improving its UI. Contributes to the creation of new endpoints for its Golang backend for frontend. Currently, I am leading the migration of the application to a microfrontend built using React, and helping explore the use of GraphQL to improve our services and performance.",
+            "Responsible for the maintenance of Business Deposits Web App built with Angular, adding new features and improving its UI. Contributes to the creation of new endpoints for its Golang backend for frontend. Currently, I am leading the migration of the app to a microfrontend using React, and helping explore the use of GraphQL to improve our services and performance.",
           technologies: ["Javascript", "Angular", "React", "Typescript", "Golang", "GraphQL"],
         },
         {
@@ -74,6 +87,31 @@ export const RESUME_DATA = {
             "Natural Language Processing",
             "Java",
             "Java Spring Boot",
+          ],
+        },
+      ],
+    },
+    {
+      company: "Senti AI",
+      link: "https://senti.ai/",
+      role: [
+        {
+          title: "AI Research Intern",
+          start: "Jul 2020",
+          end: "Sep 2020",
+          description:
+            "In-depth exploration of Python and Python libraries used for machine learning and data visualization. Performed EDA on Senti's NLP datasets and built a web scraper to scrape Cebuano sites using BeautifulSoup.",
+          technologies: [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Matplotlib",
+            "Tensorflow",
+            "Scikit-Learn",
+            "Data Analysis",
+            "Data Visualization",
+            "Machine Learning",
+            "Web Scraping",
           ],
         },
       ],
