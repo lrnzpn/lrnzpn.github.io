@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.contact-page {
+  .contact-section {
+    padding: $spacing-4xl 0;
+    max-width: 600px;
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      margin-bottom: $spacing-3xl;
+    }
+  }
+
+  .contact-form {
+    background-color: $color-bg-secondary;
+    padding: $spacing-2xl;
+    border-radius: $radius-lg;
+    box-shadow: $shadow-md;
+  }
+
+  .success-message {
+    text-align: center;
+    padding: $spacing-3xl;
+    background-color: rgba($color-success, 0.1);
+    border-radius: $radius-lg;
+    border: 2px solid $color-success;
+
+    h2 {
+      color: $color-success;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      color: $color-text-secondary;
+      margin-bottom: 0;
+    }
+  }
+}

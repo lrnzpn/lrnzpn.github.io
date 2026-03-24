@@ -1,0 +1,44 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'abstracts/functions';
+
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/utilities';
+
+@use 'components/button';
+@use 'components/card';
+@use 'components/input';
+
+@use 'layout/header';
+@use 'layout/footer';
+
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/projects';
+@use 'pages/contact';
+
+:root {
+  --color-primary: #{variables.$color-primary};
+  --color-primary-light: #{variables.$color-primary-light};
+  --color-primary-dark: #{variables.$color-primary-dark};
+  --color-text-primary: #{variables.$color-text-primary};
+  --color-bg-primary: #{variables.$color-bg-primary};
+  --spacing-md: #{variables.$spacing-md};
+  --radius-md: #{variables.$radius-md};
+  --transition-base: #{variables.$transition-base};
+}
+
+body {
+  background-color: variables.$color-bg-primary;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}

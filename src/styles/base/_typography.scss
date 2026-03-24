@@ -1,0 +1,109 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: $color-text-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  margin-bottom: $spacing-md;
+}
+
+h1 {
+  font-size: fluid-size($font-size-3xl, $font-size-6xl);
+}
+
+h2 {
+  font-size: fluid-size($font-size-2xl, $font-size-5xl);
+}
+
+h3 {
+  font-size: fluid-size($font-size-xl, $font-size-4xl);
+}
+
+h4 {
+  font-size: fluid-size($font-size-lg, $font-size-3xl);
+}
+
+h5 {
+  font-size: fluid-size($font-size-base, $font-size-2xl);
+}
+
+h6 {
+  font-size: fluid-size($font-size-sm, $font-size-xl);
+}
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-primary;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+    border-radius: $radius-sm;
+  }
+}
+
+strong,
+b {
+  font-weight: $font-weight-bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  padding: 0.125rem 0.25rem;
+  background-color: $color-bg-tertiary;
+  border-radius: $radius-sm;
+}
+
+pre {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  padding: $spacing-md;
+  background-color: $color-bg-tertiary;
+  border-radius: $radius-md;
+  overflow-x: auto;
+  margin-bottom: $spacing-md;
+
+  code {
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+blockquote {
+  padding-left: $spacing-lg;
+  border-left: 4px solid $color-border;
+  font-style: italic;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-md;
+}

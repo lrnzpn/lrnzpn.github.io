@@ -1,0 +1,63 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.home-page {
+  .hero {
+    padding: $spacing-4xl 0;
+    text-align: center;
+    background: linear-gradient(135deg, rgba($color-primary, 0.05) 0%, rgba($color-secondary, 0.05) 100%);
+
+    &__container {
+      max-width: 800px;
+    }
+
+    &__title {
+      margin-bottom: $spacing-lg;
+      background: linear-gradient(135deg, $color-primary 0%, $color-secondary 100%);
+      @include gradient-text(linear-gradient(135deg, $color-primary 0%, $color-secondary 100%));
+    }
+
+    &__subtitle {
+      font-size: $font-size-2xl;
+      color: $color-text-secondary;
+      margin-bottom: $spacing-md;
+    }
+
+    &__description {
+      font-size: $font-size-lg;
+      color: $color-text-secondary;
+      margin-bottom: $spacing-2xl;
+      line-height: $line-height-relaxed;
+    }
+
+    &__actions {
+      display: flex;
+      gap: $spacing-md;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .project-grid {
+    padding: $spacing-4xl 0;
+
+    &__title {
+      text-align: center;
+      margin-bottom: $spacing-3xl;
+    }
+
+    &__grid {
+      display: grid;
+      gap: $spacing-2xl;
+      grid-template-columns: 1fr;
+
+      @include respond-to(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond-to(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

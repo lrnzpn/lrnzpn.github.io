@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.projects-page {
+  .projects-section {
+    padding: $spacing-4xl 0;
+
+    h1 {
+      text-align: center;
+      margin-bottom: $spacing-3xl;
+    }
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: $spacing-2xl;
+    grid-template-columns: 1fr;
+
+    @include respond-to(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .project-footer {
+    display: flex;
+    gap: $spacing-sm;
+    flex-wrap: wrap;
+  }
+}

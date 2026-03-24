@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Portfolio Data Schema",
+  "type": "object",
+  "required": ["profile", "projects"],
+  "properties": {
+    "profile": {
+      "type": "object",
+      "required": ["name", "title"],
+      "properties": {
+        "name": { "type": "string" },
+        "title": { "type": "string" },
+        "bio": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "location": { "type": "string" },
+        "avatar": { "type": "string" },
+        "social": {
+          "type": "object",
+          "properties": {
+            "github": { "type": "string", "format": "uri" },
+            "linkedin": { "type": "string", "format": "uri" },
+            "twitter": { "type": "string", "format": "uri" }
+          }
+        }
+      }
+    },
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "description"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "image": { "type": "string" },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "github": { "type": "string", "format": "uri" },
+          "demo": { "type": "string", "format": "uri" },
+          "featured": { "type": "boolean" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "company": { "type": "string" },
+          "position": { "type": "string" },
+          "period": { "type": "string" },
+          "description": { "type": "string" },
+          "achievements": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

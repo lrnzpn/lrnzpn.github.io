@@ -1,0 +1,88 @@
+{
+  "profile": {
+    "name": "Lorenzo Pinaroc",
+    "title": "Senior Frontend Engineer",
+    "bio": "Passionate about building performant, accessible, and scalable web applications using modern technologies and best practices.",
+    "email": "lorenzo@example.com",
+    "location": "San Francisco, CA",
+    "avatar": "/assets/images/avatar.jpg",
+    "social": {
+      "github": "https://github.com/lrnzpn",
+      "linkedin": "https://linkedin.com/in/lrnzpn",
+      "twitter": "https://twitter.com/lrnzpn"
+    }
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "E-Commerce Platform",
+      "category": "Web Application",
+      "description": "A full-featured e-commerce platform built with modern web technologies, featuring real-time inventory management and secure payment processing.",
+      "image": "/assets/images/project-1.jpg",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "Stripe"],
+      "github": "https://github.com/lrnzpn/ecommerce",
+      "demo": "https://demo.example.com",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "Design System Library",
+      "category": "Component Library",
+      "description": "A comprehensive design system with reusable components, following atomic design principles and accessibility standards.",
+      "image": "/assets/images/project-2.jpg",
+      "technologies": ["TypeScript", "Storybook", "CSS-in-JS", "Jest"],
+      "github": "https://github.com/lrnzpn/design-system",
+      "demo": "https://storybook.example.com",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "title": "Analytics Dashboard",
+      "category": "Data Visualization",
+      "description": "Real-time analytics dashboard with interactive charts and data visualization for business intelligence.",
+      "image": "/assets/images/project-3.jpg",
+      "technologies": ["Vue.js", "D3.js", "WebSocket", "Express"],
+      "github": "https://github.com/lrnzpn/analytics",
+      "demo": "https://analytics.example.com",
+      "featured": true
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["JavaScript/TypeScript", "React", "Vue.js", "HTML5/CSS3", "SCSS/Sass", "Webpack", "Vite"]
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Express", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"]
+    },
+    {
+      "category": "Tools & Practices",
+      "items": ["Git", "CI/CD", "Testing (Jest, Playwright)", "Accessibility", "Performance Optimization", "Agile/Scrum"]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Tech Corp",
+      "position": "Senior Frontend Engineer",
+      "period": "2021 - Present",
+      "description": "Leading frontend development for enterprise applications, mentoring junior developers, and establishing best practices.",
+      "achievements": [
+        "Improved application performance by 40% through code splitting and optimization",
+        "Established component library used across 5+ products",
+        "Mentored 6 junior developers"
+      ]
+    },
+    {
+      "company": "StartupXYZ",
+      "position": "Frontend Developer",
+      "period": "2019 - 2021",
+      "description": "Built and maintained customer-facing web applications with focus on user experience and accessibility.",
+      "achievements": [
+        "Achieved WCAG 2.1 AA compliance across all products",
+        "Reduced bundle size by 60% through optimization",
+        "Implemented automated testing pipeline"
+      ]
+    }
+  ]
+}
